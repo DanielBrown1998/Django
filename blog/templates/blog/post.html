@@ -1,0 +1,8 @@
+{% extends "global/index.html" %}
+
+{% block texto %}{{name}}{% endblock texto %}
+{% block posts %}
+    <h2>{{data.title}}</h2>
+    <p>{{data.body}}</p>
+{% endblock posts %}
+{% block info %}{% endblock info %}

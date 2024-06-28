@@ -1,3 +1,15 @@
 {% extends "global/index.html" %}
 
-{% block texto %}HOME{% endblock texto %}
+{% block texto %}
+    {{name}}
+{% endblock texto %}
+{% block info %}
+{% for item in lista %}
+<section class="container">
+    <h2>{{tema}}_{{item}}</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, culpa, blanditiis molestiae quas temporibus nemo commodi sapiente ullam odit vitae fugit. Quo, corporis placeat necessitatibus molestiae ea ex ut fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti at blanditiis quam natus maiores aperiam fuga officiis, nobis beatae totam? Quasi, iure. Corporis, magnam doloribus eius voluptas ratione qui minima?</p>
+</section>
+{% endfor %}
+{% endblock info %}
+{% block posts %}{% endblock posts %}
+

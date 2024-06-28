@@ -1,3 +1,16 @@
 {% extends "global/index.html" %}
 
-{% block texto%}BLOG{% endblock texto%}
+{% block texto%}
+    {{name}}
+{% endblock texto%}
+{% block info %}{% endblock info %}
+{% block posts %}
+    {% for item in data %}
+    <section class="container">
+        <h2>{{item.title}}</h2>
+        <p>{{item.body}}</p>
+    </section>
+    {% endfor %}
+{% endblock posts %}
+
+
