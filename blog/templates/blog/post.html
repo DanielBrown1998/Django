@@ -2,7 +2,11 @@
 
 {% block texto %}{{name}}{% endblock texto %}
 {% block posts %}
-    <h2>{{data.title}}</h2>
-    <p>{{data.body}}</p>
+    {% if data %}
+        <h2>{{data.title}}</h2>
+        <p>{{data.body}}</p>
+    {% else %}
+        <h2>Post não encontrado</h2>
+    {% endif %}
 {% endblock posts %}
 {% block info %}{% endblock info %}

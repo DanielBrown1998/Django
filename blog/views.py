@@ -13,13 +13,18 @@ def index(request):
 
 
 def post(request, pk: int):
+    found_post = None
     for item in posts:
         if item['id'] == pk:
-            context = {
-                "name": "BLOG",
-                "title": f"Post->{item['id']}",
-                "tema": 'Tema-post',
-                "data": item
-                }
+            found_post = item
+    
+
+    context = {
+        "name": "BLOG",
+        "title": f"Post->{item['id']}",
+        "tema": 'Tema-post',
+        "data": found_post
+        }
+    
     print(request, pk)
     return render(request, 'blog/post.html', context=context)
